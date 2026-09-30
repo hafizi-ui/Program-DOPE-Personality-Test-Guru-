@@ -42,7 +42,7 @@ h2{font-size:50px;max-width:1380px}
 h3{margin:0;font-size:1rem;font-weight:800;color:var(--ink)}
 p{margin:0;line-height:1.4}
 .muted{color:var(--muted)}
-.cite{position:absolute;left:80px;right:200px;bottom:34px;font-size:19px;color:var(--muted);font-weight:600}
+.cite{position:absolute;left:80px;right:140px;bottom:58px;font-size:18px;color:var(--muted);font-weight:600}
 .dark .cite{color:var(--onink-muted)}
 .rule{height:4px;width:130px;background:var(--gold);border-radius:2px}
 ul.b{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:22px}
@@ -234,8 +234,8 @@ ul.b b{color:var(--ink)}
 .thanks{font-size:36px;font-weight:900;color:#fff}
 
 /* references */
-.refs{display:flex;flex-direction:column;gap:30px;max-width:1360px}
-.refs p{font-size:27px;line-height:1.45;padding-left:48px;text-indent:-48px}
+.refs{display:flex;flex-direction:column;gap:16px;max-width:1440px}
+.refs p{font-size:22px;line-height:1.45;padding-left:48px;text-indent:-48px}
 .refs a{color:var(--teal);word-break:break-all}
 
 .confetti{position:fixed;inset:0;pointer-events:none;z-index:30}
@@ -244,6 +244,8 @@ ul.b b{color:var(--ink)}
 .fact{background:var(--tint);border-radius:18px;padding:34px 34px 30px;border-top:8px solid var(--teal)}
 .fact .big{font-size:96px;font-weight:900;color:var(--ink);line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
 .fact p{font-size:28px;color:var(--muted);margin-top:14px;font-weight:600}
+.fact p b{color:var(--ink)}
+.fact .src{display:block;margin-top:12px;font-size:20px;font-weight:800;color:var(--teal)}
 </style>
 
 <div class="progress" id="progress"></div>
@@ -335,7 +337,7 @@ ul.b b{color:var(--ink)}
    </ul>
   </div>
  </div>
- <p class="cite">Sumber: Stephenson (t.t.-b); Marston (1928).</p>
+ <p class="cite">Sumber: Stephenson (t.t.-b), richardstep.com/self-tests-quizzes/dope-bird-personality-test-printable/ · Marston (1928)</p>
 </section>
 
 <!-- 7 FAKTA DOPE -->
@@ -348,19 +350,20 @@ ul.b b{color:var(--ink)}
   <div class="fact"><div class="big">5–6</div><p>minit untuk melengkapkan ujian</p></div>
  </div>
  <div class="callout">Implikasi: ujian yang ringkas dan mudah difahami sesuai digunakan bersama murid di sekolah.</div>
- <p class="cite">Sumber: Stephenson (t.t.-a), dicapai 29 September 2026.</p>
+ <p class="cite">Sumber: Stephenson (t.t.-a), richardstep.com/dope-personality-type-quiz/dope-bird-4-personality-types-test-questions-online-version/</p>
 </section>
 
 <!-- 8 KEPENTINGAN -->
-<section class="slide" data-sec="1" data-notes="Kaitkan dengan pengalaman guru di bilik darjah. Minta seorang dua peserta berkongsi contoh.">
+<section class="slide" data-sec="1" data-notes="Tiga dapatan kajian: (1) meta-analisis Poropat (2009) melibatkan lebih 70,000 pelajar; sifat ketelitian (conscientiousness) menambah ramalan pencapaian di peringkat tinggi setanding kecerdasan. (2) Hattie: hubungan guru-murid mempunyai saiz kesan 0.52, melebihi titik engsel 0.40. (3) Kajian 146 guru Bahasa Melayu di Daerah Klang: pelaksanaan pengajaran terbeza masih di tahap sederhana (min 3.15).">
  <div class="label">Kepentingan kepada guru</div>
- <h2>Guru yang memahami personaliti lebih mudah menyesuaikan cara mengajar</h2>
- <ul class="b" style="max-width:1300px;gap:30px">
-  <li><b>Kenal diri:</b> memahami gaya sendiri memudahkan guru memilih pendekatan pengajaran</li>
-  <li><b>Fahami murid:</b> setiap personaliti belajar dan berkomunikasi dengan cara berbeza</li>
-  <li><b>Kerja berpasukan:</b> kolaborasi dengan rakan sekerja menjadi lebih lancar</li>
-  <li><b>Pendekatan santai:</b> DOPE dijalankan melalui permainan, bukan ujian formal</li>
- </ul>
+ <h2>Kajian menunjukkan personaliti dan hubungan <span style="white-space:nowrap">guru–murid</span> memberi kesan nyata kepada pembelajaran</h2>
+ <div class="facts">
+  <div class="fact"><div class="big">70,000+</div><p>pelajar dalam meta-analisis: sifat <b>ketelitian</b> meramal pencapaian akademik setanding kecerdasan</p></div>
+  <div class="fact"><div class="big">0.52</div><p>saiz kesan <b>hubungan guru–murid</b> terhadap pencapaian, melebihi purata 0.40</p></div>
+  <div class="fact"><div class="big">146</div><p>guru Bahasa Melayu di Klang: pelaksanaan <b>pengajaran terbeza</b> masih di tahap sederhana</p></div>
+ </div>
+ <div class="callout">Implikasi: memahami personaliti membantu guru membina hubungan dan membezakan pengajaran.</div>
+ <p class="cite">Sumber: Poropat (2009), doi.org/10.1037/a0014996 · Hattie (2017), visible-learning.org · Elmustian et al. (2026), zenodo.org/records/21783507</p>
 </section>
 
 <!-- 9 MINI CABARAN -->
@@ -489,7 +492,10 @@ ul.b b{color:var(--ink)}
  <div class="label">Rujukan</div>
  <h2>Rujukan</h2>
  <div class="refs">
+  <p>Elmustian, Mahamod, Z., Austrus, E., &amp; Mohamed Zohomi, N. A. (2026). Examining differentiated instruction practices among secondary school Malay language teachers in Malaysia. <i>International Journal of Evaluation and Research in Education, 15</i>(1). <a href="https://zenodo.org/records/21783507" target="_blank" rel="noopener">https://zenodo.org/records/21783507</a></p>
+  <p>Hattie, J. (2017). <i>Visible Learning<sup>plus</sup>: 250+ influences on student achievement</i>. Corwin. <a href="https://visible-learning.org/hattie-ranking-influences-effect-sizes-learning-achievement/" target="_blank" rel="noopener">https://visible-learning.org/hattie-ranking-influences-effect-sizes-learning-achievement/</a></p>
   <p>Marston, W. M. (1928). <i>Emotions of normal people</i>. Kegan Paul, Trench, Trubner &amp; Co.</p>
+  <p>Poropat, A. E. (2009). A meta-analysis of the five-factor model of personality and academic performance. <i>Psychological Bulletin, 135</i>(2), 322–338. <a href="https://doi.org/10.1037/a0014996" target="_blank" rel="noopener">https://doi.org/10.1037/a0014996</a></p>
   <p>Stephenson, R. N. (t.t.-a). <i>DOPE bird 4 personality types test questions (online version)</i>. RichardStep. Dicapai 29 September 2026, daripada <a href="https://richardstep.com/dope-personality-type-quiz/dope-bird-4-personality-types-test-questions-online-version/" target="_blank" rel="noopener">https://richardstep.com/dope-personality-type-quiz/dope-bird-4-personality-types-test-questions-online-version/</a></p>
   <p>Stephenson, R. N. (t.t.-b). <i>DOPE 4 bird personality test: Dove, Owl, Peacock, Eagle</i>. RichardStep. <a href="https://richardstep.com/self-tests-quizzes/dope-bird-personality-test-printable/" target="_blank" rel="noopener">https://richardstep.com/self-tests-quizzes/dope-bird-personality-test-printable/</a></p>
  </div>
