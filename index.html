@@ -246,6 +246,51 @@ ul.b b{color:var(--ink)}
 .fact p{font-size:28px;color:var(--muted);margin-top:14px;font-weight:600}
 .fact p b{color:var(--ink)}
 .fact .src{display:block;margin-top:12px;font-size:20px;font-weight:800;color:var(--teal)}
+.ansgrid{display:grid;grid-template-columns:.78fr 1.5fr;gap:30px;align-items:start}
+.anscol{display:flex;flex-direction:column;gap:14px}
+.ansbox{border:2px solid var(--line);border-radius:18px;padding:20px 22px}
+.anshead{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:14px}
+.anshead span{font-size:28px;font-weight:900;color:var(--ink)}
+.anshead em{font-style:normal;font-size:19px;font-weight:700;color:var(--muted)}
+.fixed{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.fx{display:flex;align-items:center;gap:12px;border-radius:12px;padding:8px 12px;background:var(--tint);font-size:25px;font-weight:800;cursor:pointer;transition:.2s}
+.fx b{width:40px;height:40px;border-radius:9px;display:grid;place-items:center;background:var(--c);color:#fff;font-size:22px;flex:none}
+.fx span{color:var(--c)}
+.mtx{display:grid;gap:6px}
+.mtx[data-card="sif"]{--ch:78px;--cf:17px}
+.mtx[data-card="sen"],.mtx[data-card="lak"]{--ch:40px;--cf:19px}
+.mtx[data-card="sen"] .h,.mtx[data-card="lak"] .h{height:22px}
+.anscol .ansbox{padding:12px 20px}
+.anscol .anshead{margin-bottom:4px}
+.mtx .h{display:grid;place-items:center;font-size:20px;font-weight:900;color:var(--muted);height:38px}
+.mtx .r{display:grid;place-items:center;font-size:26px;font-weight:900;color:var(--ink)}
+.cell img{width:62%;height:62%;object-fit:contain;pointer-events:none}
+.cell{height:var(--ch,52px);border-radius:9px;display:grid;place-items:center;background:var(--c);color:#fff;font-weight:800;font-size:var(--cf,20px);border:0;padding:0;transition:opacity .2s,transform .2s}
+.dim .cell:not(.hit),.dim .fx:not(.hit){opacity:.18}
+.cell.hit,.fx.hit{transform:scale(1.06)}
+.anslegend{display:flex;flex-wrap:wrap;gap:10px 18px;font-size:22px;font-weight:700}
+.anslegend button{display:flex;align-items:center;gap:8px;border:2px solid var(--line);background:#fff;border-radius:999px;padding:6px 14px 6px 6px;font-weight:800;font-size:22px}
+.anslegend button b img{width:70%;height:70%;object-fit:contain}
+.anslegend button b{width:34px;height:34px;border-radius:8px;display:grid;place-items:center;background:var(--c);color:#fff;font-size:18px}
+.anslegend button.on{border-color:var(--c);background:color-mix(in srgb,var(--c) 12%,#fff)}
+.slide.ans{gap:18px;padding-top:84px}
+.slide.ans h2{font-size:42px}
+.pbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:var(--tint);border-radius:14px;padding:10px 14px}
+.pbar .pl{font-size:18px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-right:4px}
+.pbar .pp{border:2px solid var(--line);background:#fff;border-radius:999px;padding:6px 16px;font-weight:800;font-size:21px;max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pbar .pp.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.pbar .pp i{font-style:normal;display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--gold);color:var(--ink);font-size:14px;margin-right:6px}
+.cell .tags i:hover{background:#B3261E;color:#fff}
+.pbar .st{flex:1;min-width:200px;font-size:18px;font-weight:700;color:var(--ink);text-align:right}
+.pbar .st b{color:var(--teal)}
+.pbar .ub{border:0;border-radius:999px;padding:7px 14px;font-weight:800;font-size:18px;background:#fff;border:2px solid var(--line)}
+.pbar .ub.warn{background:#B3261E;border-color:#B3261E;color:#fff}
+.cell{position:relative}
+.cell .tags{position:absolute;top:-7px;right:-4px;display:flex;gap:2px}
+.cell .tags i{font-style:normal;min-width:24px;height:24px;padding:0 5px;border-radius:12px;cursor:pointer;background:var(--gold);color:var(--ink);font-size:13px;font-weight:900;display:grid;place-items:center;box-shadow:0 0 0 2px #fff}
+.cell.flash{animation:flash .6s}
+@keyframes flash{0%{transform:scale(1.15);box-shadow:0 0 0 6px var(--gold)}100%{transform:none;box-shadow:none}}
+.cell:hover{filter:brightness(1.1)}
 </style>
 
 <div class="progress" id="progress"></div>
@@ -277,7 +322,7 @@ ul.b b{color:var(--ink)}
  <div class="phases">
   <button class="phase" data-goto="3"><span class="n">FASA 1</span><h3>Pembukaan dan Ceramah Pengenalan</h3><p>Suai kenal dan pengenalan Ujian Personaliti DOPE</p></button>
   <button class="phase" data-goto="9"><span class="n">FASA 2</span><h3>DP Personality Game Board</h3><p>Permainan berkumpulan, empat pemain setiap papan</p></button>
-  <button class="phase" data-goto="13"><span class="n">FASA 3</span><h3>Ceramah Susulan dan Refleksi</h3><p>Keputusan, aplikasi dalam kelas dan penutup</p></button>
+  <button class="phase" data-goto="15"><span class="n">FASA 3</span><h3>Ceramah Susulan dan Refleksi</h3><p>Keputusan, aplikasi dalam kelas dan penutup</p></button>
  </div>
  <p class="hint">Klik fasa untuk <b>terus ke bahagian berkenaan</b>.</p>
 </section>
@@ -445,6 +490,25 @@ ul.b b{color:var(--ink)}
  </div>
 </section>
 
+<!-- 13b SKEMA JAWAPAN 1 -->
+<section class="slide ans" data-sec="2" data-notes="Pilih pemain dahulu, kemudian klik jawapan yang dipilih oleh pemain pada nombor soalan kad yang dicabut. Markah ditambah secara automatik pada papan skor di slaid Sesi Permainan.">
+ <h2>Skema jawapan Kad Senario dan Kad Lakonan</h2>
+ <div class="pbar" data-pbar></div>
+ <div class="anscol">
+  <div class="ansbox"><div class="anshead"><span>Kad Senario</span><em>Soalan 1–9</em></div><div class="mtx" data-card="sen"></div></div>
+  <div class="ansbox"><div class="anshead"><span>Kad Lakonan</span><em>Soalan 1–9</em></div><div class="mtx" data-card="lak"></div></div>
+ </div>
+ <p class="cite">Sumber: Answer Scheme DOPE Personality Game Board.</p>
+</section>
+
+<!-- 13c SKEMA JAWAPAN 2 -->
+<section class="slide ans" data-sec="2" data-notes="Pilih pemain dahulu, kemudian klik jawapan yang dipilih oleh pemain pada nombor soalan kad yang dicabut. Markah ditambah secara automatik pada papan skor di slaid Sesi Permainan.">
+ <h2>Skema jawapan Kad Sifat</h2>
+ <div class="pbar" data-pbar></div>
+ <div class="ansbox"><div class="anshead"><span>Kad Sifat</span><em>Soalan 1–15</em></div><div class="mtx" data-card="sif"></div></div>
+ <p class="cite">Sumber: Answer Scheme DOPE Personality Game Board.</p>
+</section>
+
 <!-- 14 DIVIDER 3 -->
 <section class="slide div" data-sec="3">
  <div style="display:flex;flex-direction:column;gap:26px">
@@ -603,9 +667,46 @@ $$('#gPresets button').forEach(b=>b.onclick=()=>{$$('#gPresets button').forEach(
 let board=store.get('board',null)||[1,2,3,4].map(n=>({name:'Pemain '+n,s:{Dove:0,Owl:0,Peacock:0,Eagle:0}}));
 const dom=p=>{const m=Math.max(...Object.values(p.s));return m?'Dominan: <b>'+ORDER.filter(k=>p.s[k]===m).join(' / ')+'</b>':'Belum ada markah'};
 function renderBoard(){$('#board').innerHTML=board.map((p,i)=>`<div class="player"><input id="pn${i}" data-i="${i}" value="${p.name.replace(/"/g,'&quot;')}" aria-label="Nama pemain ${i+1}"><div class="tally">${ORDER.map(k=>`<span class="d" style="--c:${B[k].hex}"></span><span>${k}</span><button data-i="${i}" data-k="${k}" data-d="-1" aria-label="Tolak ${k}">−</button><output>${p.s[k]}</output><button data-i="${i}" data-k="${k}" data-d="1" aria-label="Tambah ${k}">+</button>`).join('')}</div><div class="dom">${dom(p)}</div></div>`).join('');
- $$('#board .tally button').forEach(b=>b.onclick=()=>{const p=board[b.dataset.i];p.s[b.dataset.k]=Math.max(0,p.s[b.dataset.k]+ +b.dataset.d);store.set('board',board);renderBoard()});
- $$('#board input').forEach(inp=>inp.oninput=()=>{board[inp.dataset.i].name=inp.value;store.set('board',board)})}
+ $$('#board .tally button').forEach(b=>b.onclick=()=>{const p=board[b.dataset.i];p.s[b.dataset.k]=Math.max(0,p.s[b.dataset.k]+ +b.dataset.d);store.set('board',board);renderBoard();window.__ansRefresh&&__ansRefresh()});
+ $$('#board input').forEach(inp=>inp.oninput=()=>{board[inp.dataset.i].name=inp.value;store.set('board',board);window.__ansRefresh&&__ansRefresh()})}
 renderBoard();
+
+/* answer scheme + scoring */
+(function(){
+ const L=['A','B','C','D'],CN={sen:'Kad Senario',lak:'Kad Lakonan',sif:'Kad Sifat'};
+ const SEN=Array.from({length:9},()=>['Dove','Owl','Peacock','Eagle']);
+ const LAK=Array.from({length:9},()=>['Eagle','Dove','Owl','Peacock']);
+ const SIF=[['Eagle','Dove','Peacock','Owl'],['Peacock','Eagle','Dove','Owl'],['Eagle','Peacock','Owl','Dove'],['Owl','Dove','Peacock','Eagle'],['Peacock','Dove','Eagle','Owl'],
+  ['Owl','Peacock','Dove','Eagle'],['Eagle','Dove','Peacock','Owl'],['Peacock','Dove','Eagle','Owl'],['Eagle','Peacock','Owl','Dove'],['Owl','Eagle','Dove','Peacock'],
+  ['Peacock','Owl','Eagle','Dove'],['Owl','Dove','Peacock','Eagle'],['Peacock','Eagle','Dove','Owl'],['Eagle','Dove','Peacock','Owl'],['Peacock','Dove','Owl','Eagle']];
+ const D={sen:SEN,lak:LAK,sif:SIF};
+ let cur=store.get('curp',0),log=store.get('anslog',[]),armed=false,last=null;
+ $$('.mtx[data-card]').forEach(m=>{const c=m.dataset.card,T=D[c];m.style.gridTemplateColumns=`50px repeat(${T.length},1fr)`;
+  let h='<span></span>'+T.map((_,i)=>`<span class="h">${i+1}</span>`).join('');
+  L.forEach((l,r)=>{h+=`<span class="r">${l}</span>`+T.map((q,i)=>`<button class="cell" data-c="${c}" data-q="${i}" data-o="${r}" data-k="${q[r]}" style="--c:${B[q[r]].hex}" aria-label="${CN[c]} soalan ${i+1}, pilihan ${l}: ${q[r]}">${q[r]}<span class="tags"></span></button>`).join('')});
+  m.innerHTML=h});
+ function tags(){ $$('.mtx .cell').forEach(el=>{const hits=log.filter(e=>e.c===el.dataset.c&&e.q==el.dataset.q&&e.o==el.dataset.o).map(e=>e.p+1);
+   const cnt={};hits.forEach(n=>cnt[n]=(cnt[n]||0)+1);
+   el.querySelector('.tags').innerHTML=Object.keys(cnt).sort().map(n=>`<i data-rm="${n-1}" title="Klik untuk batalkan jawapan Pemain ${n} di sini">${n}${cnt[n]>1?'×'+cnt[n]:''}</i>`).join('')})}
+ function bar(){ $$('[data-pbar]').forEach(pb=>{
+   const p=board[cur];
+   pb.innerHTML=`<span class="pl">Pemain</span>`+board.map((b,i)=>`<button class="pp${i===cur?' on':''}" data-p="${i}"><i>${i+1}</i>${b.name.replace(/</g,'&lt;')}</button>`).join('')+
+   `<span class="st">${last?last:`Markah ${p.name.replace(/</g,'&lt;')}: `+ORDER.map(k=>`${k} <b>${p.s[k]}</b>`).join(' · ')}</span>`+
+   `<button class="ub" data-undo ${log.length?'':'disabled'}>${log.length?(()=>{const e=log[log.length-1];return `Buat asal: P${e.p+1} · ${CN[e.c].replace('Kad ','')} ${e.q+1} · ${L[e.o]}`})():'Buat asal'}</button><button class="ub${armed?' warn':''}" data-clear>${armed?'Sahkan kosongkan':'Kosongkan'}</button>`;
+   $$('.pp',pb).forEach(b=>b.onclick=()=>{cur=+b.dataset.p;store.set('curp',cur);last=null;armed=false;bar()});
+   $('[data-undo]',pb).onclick=()=>{const e=log.pop();if(!e)return;board[e.p].s[e.k]=Math.max(0,board[e.p].s[e.k]-1);save(`Dibatalkan: ${board[e.p].name} · ${CN[e.c]} ${e.q+1} · ${L[e.o]} = ${e.k}`)};
+   $('[data-clear]',pb).onclick=()=>{if(!armed){armed=true;bar();return}armed=false;log=[];board.forEach(b=>ORDER.forEach(k=>b.s[k]=0));save('Semua markah telah dikosongkan')};
+ })}
+ function save(msg){last=msg;store.set('anslog',log);store.set('board',board);renderBoard();tags();bar()}
+ $$('.mtx .cell').forEach(el=>el.addEventListener('click',ev=>{const t=ev.target.closest('[data-rm]');
+   if(t){ev.stopPropagation();const p=+t.dataset.rm;let idx=-1;for(let i=log.length-1;i>=0;i--){const x=log[i];if(x.p===p&&x.c===el.dataset.c&&x.q==el.dataset.q&&x.o==el.dataset.o){idx=i;break}}
+     if(idx<0)return;const x=log.splice(idx,1)[0];board[x.p].s[x.k]=Math.max(0,board[x.p].s[x.k]-1);armed=false;save(`Dibatalkan: ${board[x.p].name.replace(/</g,'&lt;')} · ${CN[x.c]} ${x.q+1} · ${L[x.o]} = ${x.k}`);return}
+   const e={p:cur,c:el.dataset.c,q:+el.dataset.q,o:+el.dataset.o,k:el.dataset.k};
+   log.push(e);board[cur].s[e.k]++;armed=false;el.classList.remove('flash');void el.offsetWidth;el.classList.add('flash');
+   save(`<b>+1 ${e.k}</b> untuk ${board[cur].name.replace(/</g,'&lt;')} (${CN[e.c]} ${e.q+1}, ${L[e.o]})`)}));
+ window.__ansRefresh=()=>{last=null;bar();tags()};
+ tags();bar();
+})();
 
 /* results */
 const RES={
