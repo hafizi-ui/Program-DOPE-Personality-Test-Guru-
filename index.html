@@ -291,6 +291,68 @@ ul.b b{color:var(--ink)}
 .cell.flash{animation:flash .6s}
 @keyframes flash{0%{transform:scale(1.15);box-shadow:0 0 0 6px var(--gold)}100%{transform:none;box-shadow:none}}
 .cell:hover{filter:brightness(1.1)}
+.rec{display:grid;grid-template-columns:1.6fr 1fr;gap:34px;align-items:start}
+.recform{display:flex;flex-direction:column;gap:16px}
+.fld{display:flex;flex-direction:column;gap:6px}
+.fld span{font-size:19px;font-weight:800;color:var(--muted);letter-spacing:.04em}
+.fld input,.recp input{font:inherit;font-size:22px;font-weight:700;padding:7px 12px;border:2px solid var(--line);border-radius:12px;background:#fff;color:var(--text);width:100%}
+.frow{display:grid;grid-template-columns:1.6fr 1fr;gap:14px}
+.recp{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.rp{border:2px solid var(--line);border-radius:14px;padding:10px 12px;display:flex;flex-direction:column;gap:6px}
+.rp .top{display:flex;justify-content:space-between;align-items:center;font-size:18px;font-weight:900;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.rp .sum{font-size:19px;font-weight:700;color:var(--ink)}
+.rp .sum b{color:var(--teal)}
+.rp.empty{opacity:.5}
+.consent{display:flex;gap:12px;align-items:flex-start;font-size:21px;font-weight:700;line-height:1.35}
+.consent input{width:26px;height:26px;flex:none;margin-top:3px}
+.recside{display:flex;flex-direction:column;gap:16px}
+.ethic{background:var(--call);border:2px solid var(--callb);border-radius:14px;padding:16px 18px}
+.ethic b{font-size:22px;color:#4D3F06}
+.ethic p{font-size:20px;color:#4D3F06;margin-top:6px}
+.btn.ghostd{background:#fff;border:2px solid var(--line);color:var(--ink)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.recmsg{font-size:20px;font-weight:700;color:var(--ink);min-height:1.4em}
+.recmsg.err{color:#B3261E}
+.dbview{display:flex;flex-direction:column;gap:20px}
+.kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.kpi{background:var(--tint);border-radius:14px;padding:16px 18px;border-top:6px solid var(--c,var(--teal))}
+.kpi .v{font-size:52px;font-weight:900;line-height:1;color:var(--ink);font-variant-numeric:tabular-nums}
+.kpi .l{font-size:19px;font-weight:700;color:var(--muted);margin-top:6px}
+.dtable{width:100%;border-collapse:collapse;font-size:19px}
+.dtable th{text-align:left;font-size:16px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:6px 10px;border-bottom:2px solid var(--line)}
+.dtable td{padding:7px 10px;border-bottom:1px solid var(--line);font-weight:600;font-variant-numeric:tabular-nums}
+.tbwrap{max-height:330px;overflow:auto;border:2px solid var(--line);border-radius:14px}
+.dbtools a{color:var(--teal);font-weight:800}
+.dbtools{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.pk{display:flex;flex-direction:column;gap:14px}
+.pkstep{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:900;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.pkstep .sn{width:30px;height:30px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font-size:17px}
+.kads{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.kad{border:3px solid var(--line);background:#fff;border-radius:16px;padding:16px 22px;text-align:left;display:flex;flex-direction:column;gap:2px}
+.kad b{font-size:32px;color:var(--ink)}
+.kad span{font-size:18px;color:var(--muted);font-weight:700}
+.kad.on{border-color:var(--teal);background:#E8F5F1;box-shadow:0 0 0 4px rgba(14,138,126,.18)}
+.qnums{display:flex;flex-wrap:wrap;gap:12px;min-height:70px}
+.qn{width:78px;height:70px;border-radius:14px;border:2px solid var(--line);background:#fff;font-size:30px;font-weight:900;color:var(--ink);position:relative}
+.qn.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.qn.done{border-color:var(--gold);background:#FFF8E1}
+.qn.done.on{background:var(--ink);color:#fff}
+.qn .dt{position:absolute;top:-8px;right:-6px;display:flex;gap:2px}
+.qn .dt i{font-style:normal;min-width:20px;height:20px;padding:0 4px;border-radius:10px;background:var(--gold);color:var(--ink);font-size:12px;font-weight:900;display:grid;place-items:center;box-shadow:0 0 0 2px #fff}
+.qhint{font-size:21px;color:var(--muted);font-weight:700;align-self:center}
+.opts4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;min-height:120px}
+.ob{border:0;border-radius:16px;background:var(--c);color:#fff;display:flex;align-items:center;gap:14px;padding:12px 18px;text-align:left;transition:transform .15s,filter .15s}
+.ob:hover{filter:brightness(1.08);transform:translateY(-2px)}
+.ob .lt{width:62px;height:62px;border-radius:12px;background:rgba(255,255,255,.22);display:grid;place-items:center;font-size:30px;font-weight:900;flex:none}
+.ob img{width:56px;height:56px;object-fit:contain}
+.ob b{font-size:36px}
+.ob.flash{animation:flash .6s}
+.ob.placeholder{background:var(--tint);color:var(--muted);font-size:21px;font-weight:700;justify-content:center;grid-column:1/-1}
+.hist{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:18px;min-height:36px}
+.hist .hl{font-weight:900;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-right:4px}
+.hist .hc{display:flex;align-items:center;gap:6px;border:2px solid var(--c);border-radius:999px;padding:3px 6px 3px 12px;font-weight:800;color:var(--ink);background:#fff}
+.hist .hc button{border:0;width:26px;height:26px;border-radius:50%;background:var(--tint);font-weight:900;font-size:16px;color:var(--ink)}
+.hist .hc button:hover{background:#B3261E;color:#fff}
 </style>
 
 <div class="progress" id="progress"></div>
@@ -490,23 +552,41 @@ ul.b b{color:var(--ink)}
  </div>
 </section>
 
-<!-- 13b SKEMA JAWAPAN 1 -->
-<section class="slide ans" data-sec="2" data-notes="Pilih pemain dahulu, kemudian klik jawapan yang dipilih oleh pemain pada nombor soalan kad yang dicabut. Markah ditambah secara automatik pada papan skor di slaid Sesi Permainan.">
- <h2>Skema jawapan Kad Senario dan Kad Lakonan</h2>
- <div class="pbar" data-pbar></div>
- <div class="anscol">
-  <div class="ansbox"><div class="anshead"><span>Kad Senario</span><em>Soalan 1–9</em></div><div class="mtx" data-card="sen"></div></div>
-  <div class="ansbox"><div class="anshead"><span>Kad Lakonan</span><em>Soalan 1–9</em></div><div class="mtx" data-card="lak"></div></div>
+<!-- 13b SKEMA JAWAPAN -->
+<section class="slide ans" data-sec="2" data-notes="Langkah: pilih pemain, pilih kad yang dicabut, pilih nombor soalan, kemudian tekan jawapan pemain. Markah ditambah secara automatik pada papan skor. Untuk membetulkan kesilapan, tekan tanda × pada senarai jawapan pemain.">
+ <h2>Skema jawapan: rekod jawapan pemain</h2>
+ <div class="pbar" id="pbar"></div>
+ <div class="pk">
+  <div class="pkstep"><span class="sn">1</span><span>Pilih kad</span></div>
+  <div class="kads" id="kads"></div>
+  <div class="pkstep"><span class="sn">2</span><span>Pilih nombor soalan</span></div>
+  <div class="qnums" id="qnums"></div>
+  <div class="pkstep"><span class="sn">3</span><span id="optHead">Tekan jawapan pemain</span></div>
+  <div class="opts4" id="opts4"></div>
+  <div class="hist" id="hist"></div>
  </div>
- <p class="cite">Sumber: Answer Scheme DOPE Personality Game Board.</p>
+ <p class="cite">Sumber: Jawapan Soalan DOPE.</p>
 </section>
 
-<!-- 13c SKEMA JAWAPAN 2 -->
-<section class="slide ans" data-sec="2" data-notes="Pilih pemain dahulu, kemudian klik jawapan yang dipilih oleh pemain pada nombor soalan kad yang dicabut. Markah ditambah secara automatik pada papan skor di slaid Sesi Permainan.">
- <h2>Skema jawapan Kad Sifat</h2>
- <div class="pbar" data-pbar></div>
- <div class="ansbox"><div class="anshead"><span>Kad Sifat</span><em>Soalan 1–15</em></div><div class="mtx" data-card="sif"></div></div>
- <p class="cite">Sumber: Answer Scheme DOPE Personality Game Board.</p>
+<!-- 13d SIMPAN REKOD -->
+<section class="slide" data-sec="2" data-notes="Selepas markah dikira, masukkan nama samaran setiap peserta, tandakan persetujuan, kemudian tekan Simpan. Jangan masukkan nama sebenar atau maklumat yang boleh mengenal pasti peserta.">
+ <div class="label">Fasa 2 · Simpan rekod</div>
+ <h2>Simpan rekod peserta ke pangkalan data</h2>
+ <div class="rec">
+  <div class="recform">
+   <div class="frow"><label class="fld" for="recProg"><span>Nama program / lokasi (pilihan)</span><input id="recProg" maxlength="80" placeholder="cth. Program DOPE Guru, SMK Kuantan"></label>
+   <label class="fld" for="recDate"><span>Tarikh program</span><input id="recDate" type="date"></label></div>
+   <datalist id="jawList"><option value="Guru"><option value="Guru Besar"><option value="Pengetua"><option value="Penolong Kanan"><option value="Ketua Panitia"><option value="Pensyarah"><option value="Kaunselor"><option value="Pelajar"></datalist>
+   <div class="recp" id="recPlayers"></div>
+   <label class="consent" for="recConsent"><input type="checkbox" id="recConsent"> Peserta telah dimaklumkan dan bersetuju data tanpa nama ini digunakan untuk kajian personaliti.</label>
+  </div>
+  <div class="recside">
+   <div class="ethic"><b>Etika data</b><p>Gunakan nama samaran sahaja. Jangan masukkan nama sebenar, nombor IC, telefon atau e-mel.</p></div>
+   <button class="btn gold" id="recSave">Simpan ke pangkalan data</button>
+   <button class="btn ghostd" id="recNew">Mulakan kumpulan baharu</button>
+   <p class="recmsg" id="recMsg" role="status"></p>
+  </div>
+ </div>
 </section>
 
 <!-- 14 DIVIDER 3 -->
@@ -565,6 +645,13 @@ ul.b b{color:var(--ink)}
  </div>
 </section>
 
+
+<!-- 19 PANGKALAN DATA -->
+<section class="slide" data-sec="4" data-notes="Paparan pangkalan data. Semua rekod hanya boleh dilihat oleh pemilik. Fasilitator lain hanya melihat bilangan rekod yang mereka simpan.">
+ <div class="label">Lampiran · Pangkalan data</div>
+ <h2>Pangkalan data personaliti peserta</h2>
+ <div id="dbView" class="dbview"><p class="muted">Memuatkan…</p></div>
+</section>
 </main>
 
 <nav class="bar">
@@ -599,6 +686,7 @@ function go(i){
   $$('#crumbs span').forEach((c,k)=>c.classList.toggle('on',k===sec));
   $('#notesText').textContent=s.dataset.notes||'Tiada nota untuk slaid ini.';
   countUp(s);
+  if(window.__recRender&&s.querySelector('#recPlayers'))__recRender();
   try{history.replaceState(null,'','#s'+(i+1))}catch(e){}
 }
 $('#prev').onclick=()=>go(cur-1);$('#next').onclick=()=>go(cur+1);
@@ -673,39 +761,127 @@ renderBoard();
 
 /* answer scheme + scoring */
 (function(){
- const L=['A','B','C','D'],CN={sen:'Kad Senario',lak:'Kad Lakonan',sif:'Kad Sifat'};
+ const L=['A','B','C','D'],CN={lak:'Kad Lakonan',sen:'Kad Senario',sif:'Kad Sifat'},EN={lak:'Role-Play',sen:'Scenario',sif:'Trait'};
  const SEN=Array.from({length:9},()=>['Dove','Owl','Peacock','Eagle']);
  const LAK=Array.from({length:9},()=>['Eagle','Dove','Owl','Peacock']);
  const SIF=[['Eagle','Dove','Peacock','Owl'],['Peacock','Eagle','Dove','Owl'],['Eagle','Peacock','Owl','Dove'],['Owl','Dove','Peacock','Eagle'],['Peacock','Dove','Eagle','Owl'],
   ['Owl','Peacock','Dove','Eagle'],['Eagle','Dove','Peacock','Owl'],['Peacock','Dove','Eagle','Owl'],['Eagle','Peacock','Owl','Dove'],['Owl','Eagle','Dove','Peacock'],
   ['Peacock','Owl','Eagle','Dove'],['Owl','Dove','Peacock','Eagle'],['Peacock','Eagle','Dove','Owl'],['Eagle','Dove','Peacock','Owl'],['Peacock','Dove','Owl','Eagle']];
- const D={sen:SEN,lak:LAK,sif:SIF};
- let cur=store.get('curp',0),log=store.get('anslog',[]),armed=false,last=null;
- $$('.mtx[data-card]').forEach(m=>{const c=m.dataset.card,T=D[c];m.style.gridTemplateColumns=`50px repeat(${T.length},1fr)`;
-  let h='<span></span>'+T.map((_,i)=>`<span class="h">${i+1}</span>`).join('');
-  L.forEach((l,r)=>{h+=`<span class="r">${l}</span>`+T.map((q,i)=>`<button class="cell" data-c="${c}" data-q="${i}" data-o="${r}" data-k="${q[r]}" style="--c:${B[q[r]].hex}" aria-label="${CN[c]} soalan ${i+1}, pilihan ${l}: ${q[r]}">${q[r]}<span class="tags"></span></button>`).join('')});
-  m.innerHTML=h});
- function tags(){ $$('.mtx .cell').forEach(el=>{const hits=log.filter(e=>e.c===el.dataset.c&&e.q==el.dataset.q&&e.o==el.dataset.o).map(e=>e.p+1);
-   const cnt={};hits.forEach(n=>cnt[n]=(cnt[n]||0)+1);
-   el.querySelector('.tags').innerHTML=Object.keys(cnt).sort().map(n=>`<i data-rm="${n-1}" title="Klik untuk batalkan jawapan Pemain ${n} di sini">${n}${cnt[n]>1?'×'+cnt[n]:''}</i>`).join('')})}
- function bar(){ $$('[data-pbar]').forEach(pb=>{
-   const p=board[cur];
-   pb.innerHTML=`<span class="pl">Pemain</span>`+board.map((b,i)=>`<button class="pp${i===cur?' on':''}" data-p="${i}"><i>${i+1}</i>${b.name.replace(/</g,'&lt;')}</button>`).join('')+
-   `<span class="st">${last?last:`Markah ${p.name.replace(/</g,'&lt;')}: `+ORDER.map(k=>`${k} <b>${p.s[k]}</b>`).join(' · ')}</span>`+
-   `<button class="ub" data-undo ${log.length?'':'disabled'}>${log.length?(()=>{const e=log[log.length-1];return `Buat asal: P${e.p+1} · ${CN[e.c].replace('Kad ','')} ${e.q+1} · ${L[e.o]}`})():'Buat asal'}</button><button class="ub${armed?' warn':''}" data-clear>${armed?'Sahkan kosongkan':'Kosongkan'}</button>`;
-   $$('.pp',pb).forEach(b=>b.onclick=()=>{cur=+b.dataset.p;store.set('curp',cur);last=null;armed=false;bar()});
-   $('[data-undo]',pb).onclick=()=>{const e=log.pop();if(!e)return;board[e.p].s[e.k]=Math.max(0,board[e.p].s[e.k]-1);save(`Dibatalkan: ${board[e.p].name} · ${CN[e.c]} ${e.q+1} · ${L[e.o]} = ${e.k}`)};
-   $('[data-clear]',pb).onclick=()=>{if(!armed){armed=true;bar();return}armed=false;log=[];board.forEach(b=>ORDER.forEach(k=>b.s[k]=0));save('Semua markah telah dikosongkan')};
- })}
- function save(msg){last=msg;store.set('anslog',log);store.set('board',board);renderBoard();tags();bar()}
- $$('.mtx .cell').forEach(el=>el.addEventListener('click',ev=>{const t=ev.target.closest('[data-rm]');
-   if(t){ev.stopPropagation();const p=+t.dataset.rm;let idx=-1;for(let i=log.length-1;i>=0;i--){const x=log[i];if(x.p===p&&x.c===el.dataset.c&&x.q==el.dataset.q&&x.o==el.dataset.o){idx=i;break}}
-     if(idx<0)return;const x=log.splice(idx,1)[0];board[x.p].s[x.k]=Math.max(0,board[x.p].s[x.k]-1);armed=false;save(`Dibatalkan: ${board[x.p].name.replace(/</g,'&lt;')} · ${CN[x.c]} ${x.q+1} · ${L[x.o]} = ${x.k}`);return}
-   const e={p:cur,c:el.dataset.c,q:+el.dataset.q,o:+el.dataset.o,k:el.dataset.k};
-   log.push(e);board[cur].s[e.k]++;armed=false;el.classList.remove('flash');void el.offsetWidth;el.classList.add('flash');
-   save(`<b>+1 ${e.k}</b> untuk ${board[cur].name.replace(/</g,'&lt;')} (${CN[e.c]} ${e.q+1}, ${L[e.o]})`)}));
- window.__ansRefresh=()=>{last=null;bar();tags()};
- tags();bar();
+ const D={lak:LAK,sen:SEN,sif:SIF};
+ const esc=t=>String(t??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+ let cur=store.get('curp',0),log=store.get('anslog',[]),armed=false,last=null,kad=null,q=null;
+ function bar(){const p=board[cur];
+  $('#pbar').innerHTML=`<span class="pl">Pemain</span>`+board.map((b,i)=>`<button class="pp${i===cur?' on':''}" data-p="${i}"><i>${i+1}</i>${esc(b.name)}</button>`).join('')+
+   `<span class="st">${last?last:`Markah ${esc(p.name)}: `+ORDER.map(k=>`${k} <b>${p.s[k]}</b>`).join(' · ')}</span>`+
+   `<button class="ub${armed?' warn':''}" data-clear>${armed?'Sahkan kosongkan':'Kosongkan'}</button>`;
+  $$('#pbar .pp').forEach(b=>b.onclick=()=>{cur=+b.dataset.p;store.set('curp',cur);last=null;armed=false;draw()});
+  $('#pbar [data-clear]').onclick=()=>{if(!armed){armed=true;bar();return}armed=false;window.__ansClearAll()}}
+ function draw(){
+  $('#kads').innerHTML=['lak','sen','sif'].map(c=>`<button class="kad${kad===c?' on':''}" data-k="${c}"><b>${CN[c]}</b><span>${EN[c]} · soalan 1–${D[c].length}</span></button>`).join('');
+  $$('#kads .kad').forEach(b=>b.onclick=()=>{kad=b.dataset.k;q=null;draw()});
+  if(!kad){$('#qnums').innerHTML='<span class="qhint">Pilih kad dahulu.</span>'}
+  else $('#qnums').innerHTML=D[kad].map((_,i)=>{const who=[...new Set(log.filter(e=>e.c===kad&&e.q===i).map(e=>e.p+1))].sort();
+    return `<button class="qn${q===i?' on':''}${who.length?' done':''}" data-q="${i}" aria-label="Soalan ${i+1}">${i+1}${who.length?`<span class="dt">${who.map(n=>`<i>${n}</i>`).join('')}</span>`:''}</button>`}).join('');
+  $$('#qnums .qn').forEach(b=>b.onclick=()=>{q=+b.dataset.q;draw()});
+  if(kad==null||q==null){$('#optHead').textContent='Tekan jawapan pemain';$('#opts4').innerHTML=`<div class="ob placeholder">${kad?'Pilih nombor soalan untuk memaparkan pilihan jawapan.':'Pilih kad dan nombor soalan untuk memaparkan pilihan jawapan.'}</div>`}
+  else{$('#optHead').textContent=`Tekan jawapan ${board[cur].name} · ${CN[kad]} soalan ${q+1}`;
+   $('#opts4').innerHTML=D[kad][q].map((k,o)=>`<button class="ob" data-o="${o}" style="--c:${B[k].hex}"><span class="lt">${L[o]}</span><img src="${ICON[k]}" alt=""><b>${k}</b></button>`).join('');
+   $$('#opts4 .ob').forEach(b=>b.onclick=()=>{const o=+b.dataset.o,k=D[kad][q][o];log.push({p:cur,c:kad,q,o,k});board[cur].s[k]++;armed=false;
+     last=`<b>+1 ${k}</b> untuk ${esc(board[cur].name)} (${CN[kad]} ${q+1}, ${L[o]})`;q=null;save()})}
+  const mine=log.map((e,idx)=>({...e,idx})).filter(e=>e.p===cur);
+  $('#hist').innerHTML=`<span class="hl">Jawapan ${esc(board[cur].name)}:</span>`+(mine.length?mine.map(e=>`<span class="hc" style="--c:${B[e.k].hex}">${CN[e.c].replace('Kad ','')} ${e.q+1} · ${L[e.o]} = ${e.k}<button data-x="${e.idx}" aria-label="Padam jawapan ini" title="Padam jawapan ini">×</button></span>`).join(''):'<span class="muted">belum ada</span>');
+  $$('#hist [data-x]').forEach(b=>b.onclick=()=>{const x=log.splice(+b.dataset.x,1)[0];if(!x)return;board[x.p].s[x.k]=Math.max(0,board[x.p].s[x.k]-1);last=`Dipadam: ${CN[x.c]} ${x.q+1} · ${L[x.o]} = ${x.k}`;save()});
+  bar()}
+ function save(){store.set('anslog',log);store.set('board',board);store.set('recSaved',null);renderBoard();draw();window.__recRender&&__recRender()}
+ window.__ansRefresh=()=>{last=null;draw()};
+ window.__ansLog=()=>log.slice();
+ window.__ansClearAll=()=>{log=[];armed=false;kad=null;q=null;cur=0;store.set('curp',0);
+  board.forEach((b,i)=>{ORDER.forEach(k=>b.s[k]=0);b.name='Pemain '+(i+1);b.jawatan=''});last='Semua jawapan dan markah telah dikosongkan';
+  const c=document.getElementById('recConsent');if(c)c.checked=false;save()};
+ draw();
+})();
+
+/* database */
+(function(){
+ const KAD={sen:'Senario',lak:'Lakonan',sif:'Sifat'},L=['A','B','C','D'];
+ const esc=t=>String(t??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+ let db=null,uid=null,owner=false,ready=false;
+ const msg=(t,err)=>{const m=$('#recMsg');m.textContent=t;m.classList.toggle('err',!!err)};
+ function playersData(){const log=window.__ansLog?__ansLog():[];
+  return board.map((p,i)=>{const js=log.filter(e=>e.p===i).map(e=>({kad:KAD[e.c],soalan:e.q+1,pilihan:L[e.o],watak:e.k}));
+   const m=Math.max(...Object.values(p.s));return {i,name:p.name,jawatan:p.jawatan||'',markah:{...p.s},dominan:m?ORDER.filter(k=>p.s[k]===m):[],jawapan:js,total:Object.values(p.s).reduce((a,b)=>a+b,0)}})}
+ function renderRec(){const box=$('#recPlayers');if(!box)return;
+  box.innerHTML=playersData().map(d=>`<div class="rp${d.total?'':' empty'}"><div class="top"><span>Pemain ${d.i+1}</span><span>${d.jawapan.length} jawapan</span></div>
+   <input data-i="${d.i}" value="${esc(d.name)}" maxlength="40" aria-label="Nama samaran pemain ${d.i+1}" placeholder="Nama samaran">
+   <input data-j="${d.i}" value="${esc(d.jawatan)}" maxlength="40" list="jawList" aria-label="Jawatan pemain ${d.i+1}" placeholder="Jawatan">
+   <div class="sum">${d.total?'Dominan: <b>'+esc(d.dominan.join(' / '))+'</b>':'Tiada markah, tidak akan disimpan'}</div></div>`).join('');
+  $$('#recPlayers input[data-j]').forEach(inp=>inp.oninput=()=>{board[inp.dataset.j].jawatan=inp.value;store.set('board',board)});
+  $$('#recPlayers input[data-i]').forEach(inp=>inp.oninput=()=>{board[inp.dataset.i].name=inp.value;store.set('board',board);renderBoard();window.__ansRefresh&&__ansRefresh()})}
+ window.__recRender=renderRec;
+ {const t=new Date(),p=n=>String(n).padStart(2,'0');$('#recDate').value=`${t.getFullYear()}-${p(t.getMonth()+1)}-${p(t.getDate())}`}
+ $('#recSave').onclick=async()=>{
+  if(!db||!uid){msg('Simpanan hanya berfungsi apabila slaid dibuka melalui pautan claude.ai dan anda telah log masuk.',true);return}
+  const ps=playersData().filter(d=>d.total>0);
+  if(!ps.length){msg('Tiada markah untuk disimpan. Kira markah di slaid skema jawapan dahulu.',true);return}
+  if(ps.some(d=>!d.name.trim()||/^Pemain \d$/.test(d.name.trim()))){msg('Isi nama samaran bagi setiap pemain yang ada markah.',true);return}
+  if(ps.some(d=>!d.jawatan.trim())){msg('Isi jawatan bagi setiap pemain yang ada markah.',true);return}
+  if(!$('#recDate').value){msg('Isi tarikh program.',true);return}
+  if(!$('#recConsent').checked){msg('Tandakan kotak persetujuan peserta dahulu.',true);return}
+  const btn=$('#recSave');btn.disabled=true;msg('Menyimpan…');
+  const sesi=Date.now().toString(36),prog=$('#recProg').value.trim(),now=new Date().toISOString();
+  try{
+   const col=db.collection('rekod/'+uid+'/peserta');
+   for(const d of ps){await col.add({namaSamaran:d.name.trim(),jawatan:d.jawatan.trim(),program:prog,tarikhProgram:$('#recDate').value,tarikh:now,sesi,pemain:d.i+1,markah:d.markah,dominan:d.dominan,jawapan:d.jawapan,jumlahJawapan:d.jawapan.length,persetujuan:true,skema:'Jawapan Soalan DOPE'})}
+   const meta=db.doc('rekod/'+uid);const g=await meta.get();const n=(g.exists&&g.data().bilangan)||0;
+   await meta.set({bilangan:n+ps.length,dikemasKini:now});
+   store.set('recSaved',sesi);msg(`${ps.length} rekod disimpan. Tekan "Mulakan kumpulan baharu" untuk kumpulan seterusnya.`);loadDash();
+  }catch(e){msg(e&&e.code==='quota_exceeded'?'Pangkalan data penuh. Hubungi pemilik.':'Gagal menyimpan ('+(e&&e.code||'ralat')+'). Pastikan anda mempunyai akses Contributor atau Editor.',true)}
+  btn.disabled=false};
+ let newArmed=false;
+ $('#recNew').onclick=()=>{if(!newArmed&&store.get('recSaved',null)===null&&playersData().some(d=>d.total)){newArmed=true;$('#recNew').textContent='Rekod belum disimpan. Klik lagi untuk padam';return}
+  newArmed=false;$('#recNew').textContent='Mulakan kumpulan baharu';window.__ansClearAll();renderRec();msg('Sedia untuk kumpulan baharu.')};
+ /* owner dashboard */
+ let rows=[];
+ async function loadDash(){const v=$('#dbView');if(!v)return;
+  if(!db){v.innerHTML='<p class="hint">Pangkalan data hanya tersedia apabila slaid dibuka melalui pautan claude.ai dan anda telah log masuk.</p>';return}
+  if(!owner){let n=0;try{const g=await db.doc('rekod/'+uid).get();n=(g.exists&&g.data().bilangan)||0}catch(e){}
+   v.innerHTML=`<p class="hint">Paparan penuh hanya untuk pemilik. Anda telah menyimpan <b>${n}</b> rekod peserta.</p>`;return}
+  v.innerHTML='<p class="muted">Memuatkan…</p>';
+  try{const fs=await db.collection('rekod').get();rows=[];
+   for(const f of fs.docs){const q=await db.collection('rekod/'+f.id+'/peserta').get();q.docs.forEach(d=>rows.push({id:d.id,...d.data()}))}
+   rows.sort((a,b)=>String(b.tarikh).localeCompare(String(a.tarikh)));renderDash()}catch(e){v.innerHTML='<p class="hint">Gagal memuatkan data ('+esc(e&&e.code)+').</p>'}}
+ function renderDash(){const v=$('#dbView'),c={Dove:0,Owl:0,Peacock:0,Eagle:0};rows.forEach(r=>(r.dominan||[]).forEach(k=>c[k]!=null&&(c[k]+=1/(r.dominan.length))));
+  const tj=rows.reduce((a,r)=>a+(r.jumlahJawapan||0),0);
+  v.innerHTML=`<div class="kpis"><div class="kpi"><div class="v">${rows.length}</div><div class="l">peserta · ${tj} jawapan</div></div>${ORDER.map(k=>`<div class="kpi" style="--c:${B[k].hex}"><div class="v">${(+c[k].toFixed(1))}</div><div class="l">dominan ${k}</div></div>`).join('')}</div>
+  <div class="dbtools"><button class="btn" id="dlSum">Muat turun ringkasan (CSV)</button><button class="btn ghostd" id="dlAns">Muat turun semua jawapan (CSV)</button><button class="btn gold" id="gdSave">Simpan ke Google Drive</button><button class="btn ghostd" id="dlRe">Muat semula</button><span class="hint" id="dlMsg"></span></div>
+  <div class="tbwrap"><table class="dtable"><thead><tr><th>Tarikh</th><th>Nama samaran</th><th>Jawatan</th><th>Program</th><th>Dominan</th><th>D</th><th>O</th><th>P</th><th>E</th><th>Jawapan</th></tr></thead><tbody>${rows.map(r=>`<tr><td>${esc(r.tarikhProgram||String(r.tarikh).slice(0,10))}</td><td>${esc(r.namaSamaran)}</td><td>${esc(r.jawatan)}</td><td>${esc(r.program)}</td><td>${esc((r.dominan||[]).join(' / '))}</td>${ORDER.map(k=>`<td>${(r.markah||{})[k]||0}</td>`).join('')}<td>${r.jumlahJawapan||0}</td></tr>`).join('')||'<tr><td colspan="10">Belum ada rekod.</td></tr>'}</tbody></table></div>`;
+  const csv=a=>a.map(r=>r.map(x=>'"'+String(x??'').replace(/"/g,'""')+'"').join(',')).join('\r\n');
+  const dl=async(name,text)=>{const m=$('#dlMsg');try{const d=await claude.use('downloads');if(!d){m.textContent='Muat turun tidak tersedia di paparan ini.';return}await d.save({filename:name,data:'﻿'+text});m.textContent=''}catch(e){m.textContent=e&&e.code==='declined'?'':'Muat turun gagal.'}};
+  window.sumCsv=()=>csv([['id','tarikh_program','tarikh_simpan','sesi','program','pemain','nama_samaran','jawatan','dove','owl','peacock','eagle','dominan','jumlah_jawapan'],...rows.map(r=>[r.id,r.tarikhProgram,r.tarikh,r.sesi,r.program,r.pemain,r.namaSamaran,r.jawatan,...ORDER.map(k=>(r.markah||{})[k]||0),(r.dominan||[]).join('/'),r.jumlahJawapan])]);
+  $('#dlSum').onclick=()=>dl('dope_ringkasan.csv',sumCsv());
+  window.ansCsv=()=>csv([['id','tarikh_program','sesi','program','nama_samaran','jawatan','kad','soalan','pilihan','watak'],...rows.flatMap(r=>(r.jawapan||[]).map(j=>[r.id,r.tarikhProgram,r.sesi,r.program,r.namaSamaran,r.jawatan,j.kad,j.soalan,j.pilihan,j.watak]))]);
+  $('#dlAns').onclick=()=>dl('dope_semua_jawapan.csv',ansCsv());
+  $('#dlRe').onclick=loadDash;
+  $('#gdSave').onclick=async()=>{const m=$('#dlMsg'),bt=$('#gdSave');
+   if(!rows.length){m.textContent='Belum ada rekod untuk disimpan.';return}
+   let mcp=null;try{mcp=await claude.use('mcp')}catch(e){}
+   if(!mcp){m.textContent='Sambungan Google Drive tidak tersedia di paparan ini.';return}
+   bt.disabled=true;m.textContent='Menyimpan ke Google Drive…';
+   const t=new Date(),pad=n=>String(n).padStart(2,'0'),stamp=`${t.getFullYear()}-${pad(t.getMonth()+1)}-${pad(t.getDate())} ${pad(t.getHours())}.${pad(t.getMinutes())}`;
+   const FOLDER='1cx171UVDUS3xmvjo2vUaUFunAy5EdoeM';
+   try{
+    const up=(title,text)=>mcp.callTool('Google Drive','create_file',{title,parentId:FOLDER,textContent:text,contentMimeType:'text/csv'},{cache:false});
+    const r1=await up(`DOPE Ringkasan Peserta ${stamp}`,sumCsv());
+    const r2=await up(`DOPE Semua Jawapan ${stamp}`,ansCsv());
+    const link=r=>{const p=r&&r.payload||{};return p.viewUrl||p.webViewLink||(p.id?'https://drive.google.com/open?id='+p.id:'')};
+    const l1=link(r1),l2=link(r2);
+    m.innerHTML=`Disimpan: ${l1?`<a href="${l1}" target="_blank" rel="noopener">Ringkasan</a>`:'Ringkasan'} · ${l2?`<a href="${l2}" target="_blank" rel="noopener">Semua jawapan</a>`:'Semua jawapan'}`;
+   }catch(e){m.textContent=e&&e.code==='denied'?'Akses Google Drive tidak dibenarkan.':'Gagal menyimpan ke Google Drive ('+(e&&e.code||'ralat')+').'}
+   bt.disabled=false}}
+ renderRec();
+ (async()=>{if(!window.claude||!claude.use){loadDash();return}
+  try{db=await claude.use('db');const u=await claude.use('user');uid=u?await u.id():null;owner=u?await u.isOwner():false}catch(e){db=null}
+  if(db&&!uid)db=null;ready=true;loadDash()})();
 })();
 
 /* results */
